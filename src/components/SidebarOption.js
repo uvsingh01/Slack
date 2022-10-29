@@ -1,69 +1,91 @@
-import React from 'react'
-import { useDispatch } from 'react-redux';
-import styled from 'styled-components';
-import { db } from '../firebase';
-import {enterRoom} from "../features/appSlice"
+import React,{useState} from "react";
+import { useDispatch } from "react-redux";
+import styled from "styled-components";
+import { db } from "../firebase";
+import { enterRoom } from "../features/appSlice";
 
-
-function SidebarOption({Icon, title, addChannelOption, id}) {
+function SidebarOption({ Icon, title, addChannelOption, id }) {
   const dispatch = useDispatch();
-  const addChannel = ()=>{
-    const channelName = prompt("Please enter the channel name");
-  if(channelName){
-    db.collection("rooms").add({
-      name: channelName,
-    })
-  }
-  }
-
-  const selectChannel = ()=>{
-    if(id){
-      dispatch(enterRoom({
-        roomId:id
-      }))
+  const [input, setInput] = useState("");
+  const addChannel = (e) => {
+    e.preventDefault();
+    const channelName = input;
+    if (channelName) {
+      db.collection("rooms").add({
+        name: channelName,
+      });
     }
-  }
+    setInput("")
+  };
+
+  const selectChannel = () => {
+    if (id) {
+      dispatch(
+        enterRoom({
+          roomId: id,
+        })
+      );
+    }
+  };
 
   return (
     <SidebarOptionContainer
-    onClick={addChannelOption ? addChannel : selectChannel}
+      onClick={selectChannel}
+      onSubmit={addChannel}
     >
-      {Icon  && <Icon fontSize="small" style={{padding:10}}/>}
-      {
-        Icon? (<h3>{title}</h3>):
-        (<SidebarOptionChannel>
-          <span>#</span>{title}
-        </SidebarOptionChannel>)
-      }
+      {Icon && <Icon fontSize="small" style={{ padding: 10 }} />}
+      {Icon && addChannelOption ? (
+        <form >
+        <input value={input} onChange={(e)=>setInput(e.target.value)} placeholder={`Add Channel`} />
+        </form>
+      ) : Icon ? (
+        <h3>{title}</h3>
+      ) : (
+        <SidebarOptionChannel>
+          <span>#</span>
+          {title}
+        </SidebarOptionChannel>
+      )}
     </SidebarOptionContainer>
-  )
+  );
 }
 
 export default SidebarOption;
 
-const SidebarOptionContainer=styled.div`
-display: flex;
-font-size: 12px;
-align-items: center;
-padding-left: 2px;
-cursor: pointer;
+const SidebarOptionContainer = styled.div`
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+  padding-left: 2px;
+  cursor: pointer;
 
-:hover{
-  opacity: 0.9;
-  background-color: #340e36;
-}
+  :hover {
+    opacity: 0.9;
+    background-color: #340e36;
+  }
 
->h3{
-  font-weight: 500;
-}
+  > h3 {
+    font-weight: 500;
+  }
 
->h3>span{
-  padding:15px;
-}
+  > h3 > span {
+    padding: 15px;
+  }
+
+  >form>input{
+    outline: none;
+    padding: 2px 10px 2px 0px;
+    border: 2px solid var(--slack-color);
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    background-color: var(--slack-color);
+  }
 `;
 
-const SidebarOptionChannel= styled.h3`
-padding: 10px 0;
-font-weight: 300;
+const SidebarOptionChannel = styled.h3`
+  padding: 10px 0;
+  font-weight: 300;
+  
 
 `;

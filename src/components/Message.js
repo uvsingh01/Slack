@@ -9,7 +9,7 @@ function Message({message, timestamp, user, userImage}) {
         <h4>
         {user}{"  "}
         <span>
-            {new Date(timestamp?.toDate()).toUTCString()}
+            {new Date(timestamp?.toDate()).toLocaleString("en-IN",{timeZone: 'Asia/Kolkata'})}
         </span>
         </h4>
         <p>{message}</p>
@@ -33,8 +33,8 @@ padding:20px;
 const MessageInfo = styled.div`
 padding-left: 10px;
 >h4>span{
-    color:gray;
-    font-weight: 300;
+    color: darkgray;
+    font-weight: 500;
     margin-left: 4px;
     font-size:10px;
 }
