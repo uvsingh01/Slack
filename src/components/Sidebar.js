@@ -45,11 +45,31 @@ export default Sidebar;
 
 const SidebarContainer = styled.div`
 background-color: var(--slack-color);
-flex:0.2;
+flex:0.3;
 border-top: 1px solid #49274b;
 color: white;
 margin-top: 60px;
 max-width: 260px;
+overflow-y: scroll !important;
+
+::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+  background-color: var(--slack-color);
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: var(--slack-color);
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #340e36;
+}
+
 >hr{
   margin-top: 10px;
   margin-bottom:10px;

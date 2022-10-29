@@ -78,10 +78,25 @@ function Chat() {
 export default Chat;
 
 const ChatContainer = styled.div`
-  flex: 0.8;
+  flex: 0.7;
   flex-grow: 1;
   overflow-y: scroll;
   margin-top: 60px;
+  ::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #340e36;
+}
 `;
 
 const Header = styled.div`
