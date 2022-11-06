@@ -29,15 +29,15 @@ padding:20px;
     border-radius: 8px;
 }
 
-@media(max-width:750px){
+@media(max-width:550px){
 h4{
-  font-size: 2.5vw;
+  font-size: 4vw;
 }
 >img{
   height:7vw;
 }
 p{
-  font-size: 2vw;
+  font-size: 4vw;
 }
 }
 
@@ -51,4 +51,5 @@ padding-left: 10px;
     margin-left: 4px;
     font-size:10px;
 }
+
 `;
