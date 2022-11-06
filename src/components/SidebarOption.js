@@ -73,8 +73,8 @@ const SidebarOptionContainer = styled.div`
   }
 
   >form>input{
+    width: 90%;
     outline: none;
-    padding: 2px 10px 2px 0px;
     border: 2px solid var(--slack-color);
     border-radius: 5px;
     text-align: center;
