@@ -48,10 +48,11 @@ flex:0.3;
 display:flex;
 align-items: center;
 margin-left: 20px;
-
+justify-content:space-between;
+gap:10px;
  >.MuiSvgIcon-root{
   margin-left: auto;
-  margin-right: 30px;
+  margin-right: 20px;
 }
 `;
 
@@ -69,7 +70,7 @@ opacity: 1;
 background-color: #421f44;
 text-align: center;
 display: flex;
-padding: 0 50px;
+padding: 0 5vw;
 align-items: center;
 color:grey;
 border: 1px gray solid;
@@ -82,6 +83,10 @@ border: 1px gray solid;
   color:white;
   
 }
+
+@media(max-width: 750px){
+  padding: 1vw;
+}
 `
 
 const HeaderRight = styled.div`
@@ -89,7 +94,7 @@ flex:0.3;
 display: flex;
 justify-content: flex-end;
 >.MuiSvgIcon-root{
-  margin-left: auto;
+  margin-left: 10px;
   margin-right: 30px;
   
 }

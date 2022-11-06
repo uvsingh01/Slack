@@ -45,7 +45,7 @@ export default Sidebar;
 
 const SidebarContainer = styled.div`
 background-color: var(--slack-color);
-flex:0.3;
+flex:0.4;
 border-top: 1px solid #49274b;
 color: white;
 margin-top: 60px;
@@ -75,6 +75,8 @@ overflow-y: scroll !important;
   margin-bottom:10px;
   border: 1px solid #49274b;
 }
+
+
 `;
 
 const SidebarHeader = styled.div`

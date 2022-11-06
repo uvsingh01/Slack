@@ -97,6 +97,9 @@ const ChatContainer = styled.div`
 	border-radius: 10px;
 	background-color: #340e36;
 }
+@media(max-width: 750px){
+  flex:0.6;
+}
 `;
 
 const Header = styled.div`

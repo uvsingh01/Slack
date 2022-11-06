@@ -28,6 +28,19 @@ padding:20px;
     height: 50px;
     border-radius: 8px;
 }
+
+@media(max-width:750px){
+h4{
+  font-size: 2.5vw;
+}
+>img{
+  height:7vw;
+}
+p{
+  font-size: 2vw;
+}
+}
+
 `;
 
 const MessageInfo = styled.div`

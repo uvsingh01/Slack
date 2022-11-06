@@ -53,15 +53,18 @@ border-radius:20px;
 >form>input{
     position: fixed;
     bottom:30px;
-    width:60%;
+    width:50%;
     border:1px solid gray;
     border-radius: 3px;
-    padding: 20px;
+    padding: 1.5vw;
     outline: none;
 }
 
 >form >Button{
     display:none;
 }
+// @media(max-width: 750px){
+//     >form>input
+//   }
 `;
 
