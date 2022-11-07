@@ -80,11 +80,13 @@ const SidebarOptionContainer = styled.div`
     text-align: center;
     color: white;
     background-color: var(--slack-color);
-    font-size: 2.5vw;
   }
   @media(max-width:350px){
     >h3{
       font-size: 3vw;
+    }
+    >form>input{
+      font-size: 2.5vw;
     }
   }
 `;
