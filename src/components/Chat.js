@@ -81,7 +81,7 @@ const ChatContainer = styled.div`
   flex: 0.5;
   flex-grow: 1;
   overflow-y: scroll;
-  margin-top: 120px;
+  margin-top: 60px;
   ::-webkit-scrollbar-track
 {
 	border-radius: 10px;
