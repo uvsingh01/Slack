@@ -86,7 +86,7 @@ const SidebarOptionContainer = styled.div`
       font-size: 3vw;
     }
     >form>input{
-      font-size: 2.5vw;
+      font-size: 2vw;
     }
   }
 `;
