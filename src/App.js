@@ -22,9 +22,7 @@ export default function App() {
   if(loading){
     return(
       <AppLoading>
-        <AppLoadingContent>
-        <img src='https://wearemarvellous.com/app/uploads/2016/01/NnOjGZC.gif' alt='https://i.pinimg.com/originals/a4/40/9f/a4409f19e2b4136bf5c2205029b92ffb.gif '/>
-        </AppLoadingContent>
+        <img src='https://i.pinimg.com/originals/a4/76/1b/a4761ba06e7f07bf5c4d076b61b62f56.gif' alt='https://i.pinimg.com/originals/a4/40/9f/a4409f19e2b4136bf5c2205029b92ffb.gif ' height={"300px"} width={"300px"}/>
       </AppLoading>
     )
   }
@@ -61,10 +59,8 @@ height:100vh;
 
 const AppLoading = styled.div`
 display:flex;
-align-items: center;
+height: 100vh;
 justify-content: center;
-margin-top: 200px;
-`;
-
-const AppLoadingContent = styled.div`
+align-items: center;
+background-color: rgb(244,249,250);
 `;
