@@ -45,7 +45,7 @@ export default Sidebar;
 
 const SidebarContainer = styled.div`
 background-color: var(--slack-color);
-flex:0.4;
+flex:0.5;
 border-top: 1px solid #49274b;
 color: white;
 margin-top: 60px;
