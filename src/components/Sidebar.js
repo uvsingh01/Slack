@@ -90,6 +90,12 @@ padding :13px;
   background-color: white;
   border-radius: 30px;
 }
+@media(max-width:350px){
+   >.MuiSvgIcon-root{
+    padding:3px;
+   }
+
+  }
 `;
 
 const SidebarInfo = styled.div`

@@ -80,10 +80,17 @@ const SidebarOptionContainer = styled.div`
     text-align: center;
     color: white;
     background-color: var(--slack-color);
+    font-size: 2.5vw;
+  }
+  @media(max-width:350px){
+    >h3{
+      font-size: 3vw;
+    }
   }
 `;
 
 const SidebarOptionChannel = styled.h3`
   padding: 10px 0;
   font-weight: 300;
+
 `;
